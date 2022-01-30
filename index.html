@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+	<head>
+		
+		<meta charset="UTF-8">
+		
+		<title>Matching Pairs</title>
+		
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	
+	<body>
+		
+		<button type="button" class="github-button" title="Open repository" onclick='window.open("https://github.com/Muller-Castro/Matching-Pairs");'></button>
+		
+		<button type="button" class="restart-button" title="Restart the game" onclick="reset_game(difficulty);">RESTART</button>
+		
+		<label for="difficulty">Difficulty:</label>
+		<select name="difficulty" id="difficulty" title="Select difficulty" oninput="reset_game(this.value);">
+			<option value="E" selected>Easy (4x3)</option>
+			<option value="M"         >Medium (6x4)</option>
+			<option value="H"         >Hard (8x5)</option>
+		</select>
+		
+		<label for="moves" class="stats">Moves:</label>
+		<span id="move-counter" class="stats-value" style="color:red">0</span>
+		
+		<label for="match-rate" class="stats">Match Rate:</label>
+		<span id="match-rate" class="stats-value" style="color:limegreen">N/A</span>
+		
+		<label for="time" class="stats">Time:</label>
+		<span id="time-counter" class="stats-value" style="color:blue">00:00</span>
+		
+		<hr/>
+		
+		<div id="board">
+			
+			<table id="board-table"></table>
+			
+		</div>
+		
+		<div id="match-collection" class="match-collection"></div>
+		
+	</body>
+	
+	<script src="Main.js"></script>
+	
+</html>
