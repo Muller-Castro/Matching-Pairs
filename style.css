@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    font-size:   14pt;
+}
+
+.github-button {
+	position:         relative;
+	top:              15px;
+	margin-right:     30px;
+	background-image: url('icons/GitHub-Mark.png');
+	width:            64px;
+	height:           64px;
+	border:           none;
+	border-radius:    32px;
+	cursor:           pointer;
+}
+
+.github-button:hover {
+	filter:    saturate(80%) brightness(105%);
+	transform: translateY(-3px);
+}
+
+.restart-button {
+	margin-right:     30px;
+	border:           none;
+	color:            white;
+	background-color: black;
+	padding:          10px 25px;
+	text-align:       center;
+	text-decoration:  none;
+	display:          inline-block;
+	font-size:        18px;
+	cursor:           pointer;
+	border-radius:    8px;
+}
+
+.restart-button:hover {
+	background-color: #555555;
+	color:            white;
+}
+
+.restart-button:active {
+	transform: translateY(4px);
+}
+
+select {
+    font-size: inherit;
+}
+
+.stats {
+	margin-left: 30px;
+}
+
+.stats-value {
+	font-weight: bold;
+}
+
+@keyframes resize {  
+	50% { font-size: 150%; }
+}
+
+#board {
+	width:  501px;
+	height: 381px;
+	border: 1px solid black;
+}
+
+.card {
+	margin-top:  10px;
+	margin-left: 10px;
+	position:    relative;
+	padding:     5px;
+	width:       96px;
+	height:      96px;
+}
+
+.card:hover {
+	bottom: 5px;
+}
+
+.icon {
+	border:   5px solid #000;
+	position: inherit;
+}
+
+.icon:hover {
+	cursor: pointer;
+	filter: saturate(80%) brightness(105%);
+}
+
+.match-collection {
+	margin-top:       10px;
+	padding:          8px;
+	background-color: #66ff99;
+	border:           2px solid #87b387;
+	min-height:       96px;
+	display:          flex;
+	flex-wrap:        wrap;
+}
+
+.collected-icon {
+	margin-top:   8px;
+	margin-right: 8px;
+	border:       5px solid #000;
+}
+
+.collected-icon:hover {
+	filter: saturate(80%) brightness(105%);
+}
