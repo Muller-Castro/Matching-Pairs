@@ -101,7 +101,7 @@ function create_img_pair(repeated_icons) {
 	
 	let icon_meta = get_icon_metadata(repeated_icons),
 	    img_a     = document.createElement("img"),
-		img_b     = document.createElement("img");
+	    img_b     = document.createElement("img");
 	
 	img_a.alt = img_b.alt = ("icon-" + icon_meta[0]);
 	
@@ -201,7 +201,7 @@ function create_card_pair(repeated_icons) {
 	
 	let card_a       = document.createElement("div"),
 	    card_b       = document.createElement("div"),
-		new_img_pair = create_img_pair(repeated_icons);
+	    new_img_pair = create_img_pair(repeated_icons);
 	
 	card_a.alt = card_b.alt = ("card-" + new_img_pair[0].alt);
 	
