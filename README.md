@@ -1,5 +1,7 @@
 # Matching Pairs
- Simple implementation of the card game "Matching Pairs". You can play it anytime at <https://muller-castro.github.io/Matching-Pairs/> or by downloading this repository and opening `index.html`.
+ Simple implementation of the card game "Matching Pairs".
+ 
+ You can play it anytime at <https://muller-castro.github.io/Matching-Pairs/> or by downloading this repository and opening `index.html`.
  
 ## How to play
  
