@@ -142,6 +142,24 @@ function stop_timer() {
 	
 }
 
+function create_timer() {
+	
+	interval = setInterval(() => {
+		
+		let minutes = Math.floor(++timer / 60),
+		    seconds = timer - minutes * 60;
+		
+		minutes = minutes < 10 ? "0" + minutes : minutes;
+		seconds = seconds < 10 ? "0" + seconds : seconds;
+		
+		TIME_COUNTER.innerText = minutes + ":" + seconds;
+		
+		if(timer > 5998) stop_timer();
+		
+	}, 1000);
+	
+}
+
 function finish_game() {
 	
 	stop_timer();
@@ -188,6 +206,8 @@ function evaluate_cards() {
 }
 
 function click_card() {
+	
+	if(!interval) create_timer();
 	
 	if(evaluate_cards() || this.flipped) return;
 	
@@ -273,31 +293,11 @@ function clear_game_settings() {
 	
 }
 
-function create_timer() {
-	
-	interval = setInterval(() => {
-		
-		let minutes = Math.floor(++timer / 60),
-		    seconds = timer - minutes * 60;
-		
-		minutes = minutes < 10 ? "0" + minutes : minutes;
-		seconds = seconds < 10 ? "0" + seconds : seconds;
-		
-		TIME_COUNTER.innerText = minutes + ":" + seconds;
-		
-		if(timer > 5998) stop_timer();
-		
-	}, 1000);
-	
-}
-
 function reset_game(new_difficulty) {
 	
 	difficulty = new_difficulty;
 	
 	clear_game_settings();
-	
-	create_timer();
 	
 	if(difficulty == "E") {
 		
